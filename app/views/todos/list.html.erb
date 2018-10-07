@@ -1,0 +1,12 @@
+<div class="uk-section">
+  <div class="uk-container">
+    <h1 id="content" class="uk-heading-divider">Todo一覧</h1>
+    <ul className="uk-list">
+      <% @todos.each do |todo| %>
+        <li><%= todo.checked ? '済' : '未' %> : <%= todo.title %></li>
+      <% end %>
+    </ul>
+
+    <%= link_to 'Todoリストへ', todos_path, class: 'uk-button uk-button-primary' %>
+  </div>
+</div>
